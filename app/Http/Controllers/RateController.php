@@ -18,7 +18,7 @@ class RateController extends Controller {
         $sciences = Science::orderBy('type')->get();
         $orgs = Organization::orderBy('type')->get();
         $methods = Method::orderBy('type')->get();
-        return view('rate.index');
+        return view('rate.index', compact('sciences', 'orgs', 'methods'));
     }
 
     /**

@@ -8,9 +8,9 @@
                 <div class="panel-heading">Home</div>
 
                 <div class="panel-body">
-                    <a href="{{ url('create/form') }}"><i class="glyphicon glyphicon-user"></i> Додати працівника</a>
+                    <a href="{{ url('create/form') }}"><i class="glyphicon glyphicon-user"></i> Додати працівника</a> <br/><br/>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
 
                             <table class="table table-hover">
                                 <tr>

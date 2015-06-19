@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
 
             {!! Form::open(array('url' => 'create/block', 'method' => 'POST')) !!}
             <div class="form-group">
@@ -26,6 +26,59 @@
                 <input type="submit" value='Додати' class="form-control btn btn-primary" required/>
             </div>
             {!! Form::close() !!}
+        </div>
+        <div class="col-md-8">
+            <h4>Наукова робота</h4>
+            <table class="table table-hover">
+                <tr>
+                    <th>Вид</th>
+                    <th>К-ть балів</th>
+                </tr>
+                @foreach ($sciences as $science)
+                <tr >
+                    <td>
+                        {{ $science->type }}
+                    </td>
+                    <td>{{ $science->unit }}</td>
+                </tr>
+                @endforeach
+            </table>   
+            <hr>
+
+            <h4>Методична робота</h4>
+
+            <table class="table table-hover">
+                <tr>
+                    <th>Вид</th>
+                    <th>К-ть балів</th>
+                </tr>
+                @foreach ($methods as $method)
+                <tr >
+                    <td>
+                        {{ $method->type }}
+                    </td>
+                    <td>{{ $method->unit }}</td>
+                </tr>
+                @endforeach
+            </table> 
+            <hr>
+
+            <h4>Організаційна робота</h4>
+            <table class="table table-hover">
+                <tr>
+                    <th>Вид</th>
+                    <th>К-ть балів</th>
+                </tr>
+                @foreach ($orgs as $org)
+                <tr >
+                    <td>
+                        {{ $org->type }}
+                    </td>
+                    <td>{{ $org->unit }}</td>
+                </tr>
+                @endforeach
+            </table> 
+            <hr>
         </div>
     </div>
 </div>
