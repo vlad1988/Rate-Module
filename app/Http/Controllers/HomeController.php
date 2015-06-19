@@ -1,8 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+use App\Worker;
 class HomeController extends Controller {
 
-	/*
+    /*
 	|--------------------------------------------------------------------------
 	| Home Controller
 	|--------------------------------------------------------------------------
@@ -13,24 +14,25 @@ class HomeController extends Controller {
 	|
 	*/
 
-	/**
+    /**
 	 * Create a new controller instance.
 	 *
 	 * @return void
 	 */
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-	/**
+    /**
 	 * Show the application dashboard to the user.
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		return view('home');
-	}
+    public function index()
+    {
+        $workers = Worker::orderBy('surname')->get();
+        return view('home', compact('workers'));
+    }
 
 }
