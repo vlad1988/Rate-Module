@@ -29,8 +29,6 @@
                                 @endforeach
                             </table>                            
 
-
-
                         </div>
                         <div class="col-md-6">
 

@@ -18,6 +18,9 @@ Route::get('home', 'HomeController@index');
 Route::get('create/form', 'WorkerController@index');
 Route::post('create/worker', 'WorkerController@create');
 
+Route::get('rate/schema', 'RateController@index');
+Route::post('create/block', 'RateController@create');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
