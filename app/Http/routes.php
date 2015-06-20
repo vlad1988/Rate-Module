@@ -21,6 +21,8 @@ Route::post('create/worker', 'WorkerController@create');
 Route::get('rate/schema', 'RateController@index');
 Route::post('create/block', 'RateController@create');
 
+Route::get('create/report/{id}', 'ReportController@index');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

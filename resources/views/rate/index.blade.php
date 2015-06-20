@@ -26,6 +26,7 @@
                 <input type="submit" value='Додати' class="form-control btn btn-primary" required/>
             </div>
             {!! Form::close() !!}
+            
         </div>
         <div class="col-md-8">
             <h4>Наукова робота</h4>

@@ -16,6 +16,7 @@
                                 <tr>
                                     <th>ПІБ</th>
                                     <th>Посада</th>
+                                    <th></th>
                                 </tr>
                                 @foreach ($workers as $worker)
                                 <tr >
@@ -25,6 +26,7 @@
                                         {{ $worker->surname }}
                                     </td>
                                     <td>{{ $worker->place }}</td>
+                                    <td><a href="{{ url('create/report/'. $worker->id) }}" class="btn btn-default"> Додати</a></td>
                                 </tr>
                                 @endforeach
                             </table>                            
