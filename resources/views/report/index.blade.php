@@ -12,7 +12,8 @@
     </div>
     <div class="form-group">
         <label for='direction'>Оберіть напрям роботи</label>
-        <select name="direction" class="form-control">
+        <select name="direction" class="form-control" required>
+            <option></option>
             <option value="science">Наукова робота</option>
             <option value="method">Методична робота</option>
             <option value="organization">Організаційна робота</option>
