@@ -33,14 +33,23 @@ class ReportController extends Controller {
         $expire_date = Request::input('expire_date');
         $status = 'Заплановано';
         $rate = 0;
-        
+
         $block = Request::input('block');
         $str = explode('-', $block);
-        
-        
+
         $type = $str[0];
         $unit_store = $str[1];
-        return $unit_store;
+
+        $report->title = $title;
+        $report->type = $type;
+        $report->status = $status;
+        $report->expire_date = $expire_date;
+        $report->rate = $rate;
+        $report->unit_store = $unit_store;
+        $report->worker_id = $worker_id;
+        $report->save();
+
+        return $str[1];
     }
 
     /**

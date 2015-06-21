@@ -1,7 +1,6 @@
 @extends('app')
 
 @section('content')
-{{ $id }}
 <div class="container">
     {!! Form::open(array('url' => 'create/report', 'method' => 'POST')) !!}
     {!! Form::hidden('worker_id', $id) !!}
