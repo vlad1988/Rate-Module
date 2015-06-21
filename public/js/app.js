@@ -7,7 +7,7 @@
             var box = '<select name="block" class="form-control">';
             box += '<option></option>';
             for (var i=0; i<data.length; i++){
-                box += '<option value='+data[i].id+' - '+data[i].type+'>';
+                box += '<option value="'+data[i].type+' - '+data[i].id+'">';
                 box += data[i].type;
                 box += '</option>';
             }

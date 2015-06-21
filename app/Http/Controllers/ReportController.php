@@ -2,6 +2,7 @@
 
 use Request;
 use App\Http\Controllers\Controller;
+use App\Report;
 use App\Science;
 use App\Organization;
 use App\Method;
@@ -26,10 +27,20 @@ class ReportController extends Controller {
 	 */
     public function create()
     {
-        $type = Request::input('type');
+        $report = new Report;
+        $title = Request::input('title');
         $worker_id = Request::input('worker_id');
-
-        return $type;
+        $expire_date = Request::input('expire_date');
+        $status = 'Заплановано';
+        $rate = 0;
+        
+        $block = Request::input('block');
+        $str = explode('-', $block);
+        
+        
+        $type = $str[0];
+        $unit_store = $str[1];
+        return $unit_store;
     }
 
     /**

@@ -7,8 +7,8 @@
     {!! Form::hidden('worker_id', $id) !!}
 
     <div class="form-group">
-        <label for='type'>Назва роботи</label>
-        <input type="text" name="type" class="form-control" required/>
+        <label for='title'>Назва роботи</label>
+        <input type="text" name="title" class="form-control" required/>
     </div>
     <div class="form-group">
         <label for='direction'>Оберіть напрям роботи</label>
@@ -20,6 +20,9 @@
         </select>    
     </div>
     <div class="form-group" id='option-box'></div>
+    <div class="form-group">
+        <input type="date" class="form-control" name="expire_date"/>
+    </div>
     <div class="form-group">
         <input type="submit" value='Додати' class="form-control btn btn-primary" required/>
     </div>
