@@ -22,6 +22,8 @@ Route::get('rate/schema', 'RateController@index');
 Route::post('create/block', 'RateController@create');
 
 Route::get('create/report/{id}', 'ReportController@index');
+Route::post('show/list', 'ReportController@show');
+Route::post('create/report', 'ReportController@create');
 
 
 Route::controllers([

@@ -3,7 +3,7 @@
 @section('content')
 {{ $id }}
 <div class="container">
-    {!! Form::open(array('url' => 'create/block', 'method' => 'POST')) !!}
+    {!! Form::open(array('url' => 'create/report', 'method' => 'POST')) !!}
     {!! Form::hidden('worker_id', $id) !!}
 
     <div class="form-group">
@@ -19,6 +19,7 @@
             <option value="organization">Організаційна робота</option>
         </select>    
     </div>
+    <div class="form-group" id='option-box'></div>
     <div class="form-group">
         <input type="submit" value='Додати' class="form-control btn btn-primary" required/>
     </div>
