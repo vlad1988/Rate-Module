@@ -96,9 +96,19 @@ class ReportController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-    public function edit($id)
+    public function edit($id, $unit)
     {
-        //
+        $report = Report::find($id);
+        if($report->status == 'Заплановано'){
+            $report->status = 'Готово';
+            $report->rate = $unit;
+            $report->save();
+        } else {
+            $report->status = 'Заплановано';
+            $report->rate = 0;
+            $report->save();
+        }
+        return redirect('worker/'. $report->worker_id);
     }
 
     /**
