@@ -49,7 +49,7 @@ class ReportController extends Controller {
         $report->worker_id = $worker_id;
         $report->save();
 
-        return $str[1];
+        return redirect('worker/'.$worker_id);
     }
 
     /**

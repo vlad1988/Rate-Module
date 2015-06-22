@@ -21,9 +21,11 @@
                                 @foreach ($workers as $worker)
                                 <tr >
                                     <td>
-                                        {{ $worker->name }}
-                                        {{ $worker->patronymic }}
-                                        {{ $worker->surname }}
+                                        <a href="{{ url('worker/'. $worker->id) }}"> 
+                                            {{ $worker->name }}
+                                            {{ $worker->patronymic }}
+                                            {{ $worker->surname }}
+                                        </a>
                                     </td>
                                     <td>{{ $worker->place }}</td>
                                     <td><a href="{{ url('create/report/'. $worker->id) }}" class="btn btn-default"> Додати</a></td>

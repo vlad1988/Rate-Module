@@ -1,4 +1,6 @@
 (function($){
+
+    //    Запрос на список деятельности
     $('select[name=direction]').change(function(){
         $.post( "http://modulerate/show/list", { 
             _token: $( 'input[name=_token]' ).val(), 
@@ -15,5 +17,16 @@
             $('#option-box').html(box);
         });
     });
+
+//    Вид лейбов
+    $('span:contains("Заплановано")').each(function(){
+        $(this).addClass('badge');
+    });
+
+    $('span:contains("Готово")').each(function(){
+        $(this).addClass('label label-success');
+    });
+
+
 })(jQuery);
 

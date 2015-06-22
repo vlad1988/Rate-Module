@@ -16,6 +16,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('create/form', 'WorkerController@index');
+Route::get('worker/{id}', 'WorkerController@show');
 Route::post('create/worker', 'WorkerController@create');
 
 Route::get('rate/schema', 'RateController@index');
@@ -27,6 +28,6 @@ Route::post('create/report', 'ReportController@create');
 
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);

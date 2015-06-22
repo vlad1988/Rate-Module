@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 
 use Request;
 use App\Worker;
+use App\Report;
 
 class WorkerController extends Controller {
 
@@ -57,7 +58,9 @@ class WorkerController extends Controller {
 	 */
     public function show($id)
     {
-        //
+        $worker = Worker::find($id);
+        $reports = Report::where('worker_id', '=', $id)->orderBy('type')->get();
+        return view('worker.index', compact('worker', 'reports'));
     }
 
     /**
