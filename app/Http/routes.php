@@ -22,6 +22,11 @@ Route::post('create/worker', 'WorkerController@create');
 Route::get('rate/schema', 'RateController@index');
 Route::post('create/block', 'RateController@create');
 
+Route::get('remove/report/{id}', 'ReportController@destroy');
+Route::get('science/delete/{id}', 'RateController@destroy_science');
+Route::get('method/delete/{id}', 'RateController@destroy_method');
+Route::get('orgs/delete/{id}', 'RateController@destroy_orgs');
+
 Route::get('create/report/{id}', 'ReportController@index');
 Route::get('edit/report/{id}/{unit}', 'ReportController@edit');
 Route::post('show/list', 'ReportController@show');

@@ -14,6 +14,7 @@
             <th>Дата завершення</th>
             <th>К-ть балів</th>
             <th>Змінити статус</th>
+            <th>Видалити запис</th>
         </tr>
         @foreach ($reports as $report)
         <tr >
@@ -25,6 +26,7 @@
             <td>{{ $report->expire_date }}</td>
             <td><span id='rate'>{{ $report->rate }}</span></td>
             <td><a href="{{ url('edit/report/'. $report->id.'/'.$report->unit_store) }}" class="btn btn-default">Змінити</a></td>
+            <td><a href="{{ url('remove/report/'. $report->id) }}" class="btn btn-danger">Видалити</a></td>
         </tr>
         @endforeach
         <tr>

@@ -26,7 +26,7 @@
                 <input type="submit" value='Додати' class="form-control btn btn-primary" required/>
             </div>
             {!! Form::close() !!}
-            
+
         </div>
         <div class="col-md-8">
             <h4>Наукова робота</h4>
@@ -34,6 +34,7 @@
                 <tr>
                     <th>Вид</th>
                     <th>К-ть балів</th>
+                    <th></th>
                 </tr>
                 @foreach ($sciences as $science)
                 <tr >
@@ -41,6 +42,7 @@
                         {{ $science->type }}
                     </td>
                     <td>{{ $science->unit }}</td>
+                    <td><a href="{{ url('science/delete/'. $science->id) }}" class="btn btn-default">Видалити</a></td>
                 </tr>
                 @endforeach
             </table>   
@@ -52,6 +54,7 @@
                 <tr>
                     <th>Вид</th>
                     <th>К-ть балів</th>
+                    <th></th>
                 </tr>
                 @foreach ($methods as $method)
                 <tr >
@@ -59,6 +62,7 @@
                         {{ $method->type }}
                     </td>
                     <td>{{ $method->unit }}</td>
+                    <td><a href="{{ url('method/delete/'. $method->id) }}" class="btn btn-default">Видалити</a></td>
                 </tr>
                 @endforeach
             </table> 
@@ -69,6 +73,7 @@
                 <tr>
                     <th>Вид</th>
                     <th>К-ть балів</th>
+                    <th></th>
                 </tr>
                 @foreach ($orgs as $org)
                 <tr >
@@ -76,6 +81,7 @@
                         {{ $org->type }}
                     </td>
                     <td>{{ $org->unit }}</td>
+                    <td><a href="{{ url('orgs/delete/'. $org->id) }}" class="btn btn-default">Видалити</a></td>
                 </tr>
                 @endforeach
             </table> 

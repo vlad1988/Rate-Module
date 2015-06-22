@@ -100,7 +100,28 @@ class RateController extends Controller {
 	 */
     public function destroy($id)
     {
-        //
+        return $id;
+    }
+
+    public function destroy_science($id)
+    {
+        $science = Science::find($id);
+        $science->delete();
+        return redirect('rate/schema');
+    }
+
+    public function destroy_method($id)
+    {
+        $method = Method::find($id);
+        $method->delete();
+        return redirect('rate/schema');
+    }
+
+    public function destroy_orgs($id)
+    {
+        $org = Organization::find($id);
+        $method->delete();
+        return redirect('rate/schema');
     }
 
 }
