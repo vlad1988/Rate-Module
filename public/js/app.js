@@ -27,6 +27,12 @@
         $(this).addClass('label label-success');
     });
 
+    var sum = 0;
+    $('span#rate').each(function(){
+        sum+= parseInt($(this).html(), 10);
+        
+    });
+    $('span#sum').html(sum);
 
 })(jQuery);
 

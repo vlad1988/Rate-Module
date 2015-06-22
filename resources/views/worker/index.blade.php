@@ -23,10 +23,17 @@
             <td>{{ $report->type }}</td>
             <td><span>{{ $report->status }}</span></td>
             <td>{{ $report->expire_date }}</td>
-            <td>{{ $report->rate }}</td>
+            <td><span id='rate'>{{ $report->rate }}</span></td>
             <td><a href="{{ url('edit/report/'. $report->id.'/'.$report->unit_store) }}" class="btn btn-default">Змінити</a></td>
         </tr>
         @endforeach
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="2"><strong>Сумарна к-ть балів: </strong><span id="sum"> </span></td>
+        </tr>
     </table>
 </div>
 @endsection
