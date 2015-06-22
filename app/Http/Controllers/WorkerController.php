@@ -29,14 +29,14 @@ class WorkerController extends Controller {
         $surnname = Request::input('surname');
         $patronymic = Request::input('patronymic');
         $place = Request::input('place');
-        
+
         $worker = new Worker;
         $worker->name = $name;
         $worker->surname = $surnname;
         $worker->patronymic = $patronymic;
         $worker->place = $place;
         $worker->save();
-        
+
         return redirect('home');
     }
 
@@ -72,7 +72,7 @@ class WorkerController extends Controller {
     public function edit($id)
     {
         $worker = Worker::find($id);
-        return view('worker.update', compact('worker'));
+        return view('worker.update', compact('worker', 'id'));
     }
 
     /**
@@ -81,9 +81,23 @@ class WorkerController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-    public function update($id)
+    public function update()
     {
-        //
+        $worker_id = Request::input('worker_id');
+
+        $worker = Worker::find($worker_id);
+
+        $name = Request::input('name');
+        $surnname = Request::input('surname');
+        $patronymic = Request::input('patronymic');
+        $place = Request::input('place');
+
+        $worker->name = $name;
+        $worker->surname = $surnname;
+        $worker->patronymic = $patronymic;
+        $worker->place = $place;
+        $worker->save();
+        return redirect('home');
     }
 
     /**

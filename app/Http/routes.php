@@ -20,6 +20,7 @@ Route::get('worker/{id}', 'WorkerController@show');
 Route::get('remove/worker/{id}', 'WorkerController@destroy');
 Route::get('edit/worker/{id}', 'WorkerController@edit');
 Route::post('create/worker', 'WorkerController@create');
+Route::post('update/worker', 'WorkerController@update');
 
 Route::get('rate/schema', 'RateController@index');
 Route::post('create/block', 'RateController@create');
