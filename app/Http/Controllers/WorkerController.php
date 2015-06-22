@@ -71,7 +71,8 @@ class WorkerController extends Controller {
 	 */
     public function edit($id)
     {
-        //
+        $worker = Worker::find($id);
+        return view('worker.update', compact('worker'));
     }
 
     /**
@@ -93,7 +94,9 @@ class WorkerController extends Controller {
 	 */
     public function destroy($id)
     {
-        //
+        $worker = Worker::find($id);   
+        $worker->delete();
+        return redirect('home');
     }
 
 }

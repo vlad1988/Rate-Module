@@ -17,6 +17,8 @@
                                     <th>ПІБ</th>
                                     <th>Посада</th>
                                     <th></th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                                 @foreach ($workers as $worker)
                                 <tr >
@@ -29,6 +31,8 @@
                                     </td>
                                     <td>{{ $worker->place }}</td>
                                     <td><a href="{{ url('create/report/'. $worker->id) }}" class="btn btn-default"> Додати</a></td>
+                                    <td><a href="{{ url('edit/worker/'. $worker->id) }}" class="btn btn-warning"> Редагувати</a></td>
+                                    <td><a href="{{ url('remove/worker/'. $worker->id) }}" class="btn btn-danger"> Видалити</a></td>
                                 </tr>
                                 @endforeach
                             </table>                            

@@ -17,6 +17,8 @@ Route::get('home', 'HomeController@index');
 
 Route::get('create/form', 'WorkerController@index');
 Route::get('worker/{id}', 'WorkerController@show');
+Route::get('remove/worker/{id}', 'WorkerController@destroy');
+Route::get('edit/worker/{id}', 'WorkerController@edit');
 Route::post('create/worker', 'WorkerController@create');
 
 Route::get('rate/schema', 'RateController@index');
